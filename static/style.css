@@ -1,0 +1,16 @@
+#mood {
+	width: 100px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+  	top: 40%;
+  	transform: translateY(-50%);
+  	font-size: 125px;
+}
+
+#overlay {
+	margin-top: -130px;
+	margin-left: 50px;
+	font-size: 100px;
+	position: absolute;
+}
