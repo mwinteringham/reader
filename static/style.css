@@ -14,3 +14,10 @@
 	font-size: 100px;
 	position: absolute;
 }
+
+#error {
+	font-size: 0.25em;
+	width: 300px;
+	text-align: center;
+	margin-left: -100px;
+}

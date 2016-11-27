@@ -1,14 +1,8 @@
-var https = require('https'),
+var http = require('http'),
     fs = require('fs'),
     express = require('express'),
     lcd = require('./src/lcd'),
     StringMapper = require('./src/stringmapper'),
-    options = {
-      key: fs.readFileSync('/usr/local/apache/conf/server.key'),
-      cert: fs.readFileSync('/usr/local/apache/conf/server.crt'),
-      requestCert: false,
-      rejectUnauthorized: false
-    },
     sm;
 
 var app = express();
@@ -54,7 +48,7 @@ app.delete('/reset', function(req, res){
   });
 });
 
-var server = https.createServer(options, app).listen(3000, function(){
+var server = http.createServer(app).listen(3000, function(){
   sm = new StringMapper();
-  console.log("server started at port 3000");
-});
+  console.log("Server started at port 3000");
+})
